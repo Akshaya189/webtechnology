@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Technology</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { background-color: #333; color: #fff; padding: 1em; text-align: center; }
+    nav { background-color: #444; overflow: hidden; }
+    nav a { float: left; display: block; color: #fff; padding: 14px 16px; text-decoration: none; }
+    nav a:hover { background-color: #ddd; color: black; }
+    section { display: none; padding: 20px; }
+    #home { display: block; }
+    button { padding: 10px 20px; margin: 10px 5px; font-size: 16px; }
+    ul { line-height: 1.8; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Web Technology 011</h1>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('syllabus')">Syllabus</a>
+    <a href="#" onclick="showSection('theory')">Theory Notes</a>
+    <a href="#" onclick="showSection('lab')">Lab Manual</a>
+    <a href="#" onclick="showSection('reference')">Reference</a>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Welcome to Web Technology</h2>
+    <h3>Benefits of Web Technology:</h3>
+    <ul>
+      <li>Foundation for front-end and back-end development</li>
+      <li>Enables dynamic website creation</li>
+      <li>Enhances user experience and interface</li>
+      <li>Important for careers in web development and data-driven design</li>
+    </ul>
+    <h3>Explore:</h3>
+    <button onclick="showSection('syllabus')">Syllabus</button>
+    <button onclick="showSection('theory')">Theory Notes</button>
+    <button onclick="showSection('lab')">Lab Manual</button>
+    <button onclick="showSection('reference')">Reference Links</button>
+  </section>
+
+  <!-- Syllabus Section -->
+  <section id="syllabus">
+    <h2>Web Technology Syllabus</h2>
+    <ol>
+      <li>Introduction to HTML</li>
+      <li>HTML Elements and Attributes</li>
+      <li>CSS Basics</li>
+      <li>Advanced CSS and Layouts</li>
+      <li>Introduction to JavaScript</li>
+      <li>JavaScript Functions and Events</li>
+      <li>DOM Manipulation</li>
+      <li>HTML5 and CSS3 Features</li>
+      <li>Responsive Design and Frameworks</li>
+      <li>Web Hosting and Deployment</li>
+    </ol>
+  </section>
+
+  <!-- Theory Notes Section -->
+  <section id="theory">
+    <h2>Theory Notes</h2>
+    <p>Click the button below to access the full theory notes in PDF format:</p>
+    <a href="Web-Technology-notes.pdf" target="_blank">
+      <button>Open Theory Notes PDF</button>
+    </a>
+  </section>
+
+  <!-- Lab Manual Section -->
+  <section id="lab">
+    <h2>Lab Manual</h2>
+    <p>Click the button below to open the Web Technology Lab Manual from MRCET:</p>
+    <a href="https://mrcet.com/pdf/Lab%20Manuals/WT%20LAB%20MANUAL.pdf" target="_blank">
+      <button>Open Lab Manual (MRCET)</button>
+    </a>
+  </section>
+
+  <!-- Reference Section -->
+  <section id="reference">
+    <h2>Reference Links</h2>
+    <ul>
+      <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a></li>
+      <li><a href="https://www.geeksforgeeks.org/web-technology/" target="_blank">Geeks for Geeks</a></li>
+      <li><a href="https://www.tutorialspoint.com/web_developers_guide/index.htm" target="_blank">TutorialsPoint</a></li>
+      <li><a href="https://www.javatpoint.com/web-technology" target="_blank">JavaTpoint</a></li>
+      <li><a href="https://www.codecademy.com/catalog/language/html-css" target="_blank">Codecademy</a></li>
+      <li><a href="https://html.com/" target="_blank">HTML.com</a></li>
+      <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+      <li><a href="https://www.freecodecamp.org/news/" target="_blank">freeCodeCamp</a></li>
+      <li><a href="https://www.udemy.com/topic/web-development/" target="_blank">Udemy</a></li>
+      <li><a href="https://www.coursera.org/browse/computer-science/web-development" target="_blank">Coursera</a></li>
+      <li><a href="https://www.edx.org/learn/web-development" target="_blank">edX</a></li>
+      <li><a href="https://www.pluralsight.com/browse/software-development/web-development" target="_blank">Pluralsight</a></li>
+      <li><a href="https://www.linkedin.com/learning/topics/web-development" target="_blank">LinkedIn Learning</a></li>
+      <li><a href="https://github.com/topics/web-development" target="_blank">GitHub Topics</a></li>
+      <li><a href="https://www.khanacademy.org/computing/computer-programming/html-css" target="_blank">Khan Academy</a></li>
+      <li><a href="https://cssreference.io/" target="_blank">CSS Reference</a></li>
+      <li><a href="https://htmlreference.io/" target="_blank">HTML Reference</a></li>
+      <li><a href="https://javascript.info/" target="_blank">JavaScript.info</a></li>
+      <li><a href="https://www.smashingmagazine.com/category/web-development/" target="_blank">Smashing Magazine</a></li>
+    </ul>
+  </section>
+
+  <!-- JavaScript to switch sections -->
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(sec => sec.style.display = 'none');
+      document.getElementById(sectionId).style.display = 'block';
+      window.scrollTo(0, 0);
+    }
+  </script>
+
+</body>
+</html>
